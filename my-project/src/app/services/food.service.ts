@@ -3,32 +3,35 @@ import { Food } from '../shared/models/Food';
 import { sample_foods, sample_tags } from 'src/data';
 import { Tag } from '../shared/models/Tag';
 import { TagContentType } from '@angular/compiler';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { FOODS_BY_ID_URL, FOODS_BY_TAG_URL, FOODS_SEARCH_URL, FOODS_TAGS_URL, FOODS_URL } from '../shared/constants/url';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FoodService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
-  getAll(): Food[]{
-    return sample_foods;
+  getAll(): Observable<Food[]>{
+    return this.httpClient.get<Food[]>(FOODS_URL);
   }
 
   getAllFoodsBySearch(searchName: string){
-    return this.getAll().filter(food => food.name.toLowerCase().includes(searchName.toLowerCase()));
+    return this.httpClient.get<Food[]>(FOODS_SEARCH_URL + searchName);
   }
 
-  getAllTags(): Tag[]{
-    return sample_tags
+  getAllTags(): Observable<Tag[]>{
+    return this.httpClient.get<Tag[]>(FOODS_TAGS_URL)
   }
 
-  getAllPizzaByTag(tag:string):Food[]{
-    return this.getAll().filter(food => food.tags?.includes(tag))
+  getAllPizzaByTag(tag:string):Observable<Food[]>{
+    return this.httpClient.get<Food[]>(FOODS_BY_TAG_URL + tag);
   }
 
-  getFoodById(foodId:string):Food{
-   return this.getAll().find(food => food.id == foodId) ?? new Food;
+  getFoodById(foodId:string):Observable<Food>{
+   return this.httpClient.get<Food>(FOODS_BY_ID_URL + foodId);
   }
 
 }

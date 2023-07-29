@@ -27,7 +27,7 @@ resetText="Go to Home page!"
        </select>
      </div>
      <div>
-        {{cartItem.price | currency}}
+        {{cartItem.price | currency:'BGN':'symbol-narrow'}}
      </div>
      <div>
         <button class="remove-button" (click)="removeFromCart(cartItem)">
@@ -39,7 +39,7 @@ resetText="Go to Home page!"
 <div class="checkout">
    <div>
       <div class="foods-count">{{cart.totalCount}}</div>
-      <div class="total-price">{{cart.totalPrice.toFixed(2)|currency}}</div>
+      <div class="total-price">{{cart.totalPrice.toFixed(2)|currency:'BGN':'symbol-narrow'}}</div>
    </div>
 
    <a routerLink="/checkout">Checkout</a>
