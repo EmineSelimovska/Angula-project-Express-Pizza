@@ -62,6 +62,14 @@ router.post("/register", asyncHandler(
     const dbUser = await UserModel.create(newUser);
     res.send(generateToken(dbUser));
   }
+));
+
+router.get('/profile/:id', asyncHandler(
+  async (req,res) => {
+    const user = await UserModel.findById(req.params.id);
+    res.send(user);
+    }
+  
 ))
 
 const generateToken = (user: User) => {

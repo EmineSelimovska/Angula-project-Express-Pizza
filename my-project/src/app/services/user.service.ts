@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { BehaviorSubject, Observable, identity, tap } from 'rxjs';
 import { User } from '../shared/models/User';
 import { IUserLogin } from '../shared/interfaces/IUserLogin';
 import { HttpClient } from '@angular/common/http';
-import { USER_LOGIN_URL, USER_REGISTER_URL } from '../shared/constants/url';
+import { USER_LOGIN_URL, USER_PROFILE_URL, USER_REGISTER_URL } from '../shared/constants/url';
 import { ToastrService } from 'ngx-toastr';
 import { IUserRegister } from '../shared/interfaces/IUserRegister';
 
@@ -63,7 +63,10 @@ public userObservable: Observable<User>;
       })
     )
   }
-
+  
+  profile(id:string): Observable<User>{
+    return this.http.get<User>(USER_PROFILE_URL + id)
+  }
 
   logout(){
   this.userSubject.next(new User());

@@ -3,6 +3,7 @@ import { Cart } from '../shared/models/Cart';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Food } from '../shared/models/Food';
 import { CartItem } from '../shared/models/CartItem';
+import { Order } from '../shared/models/Order';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,7 @@ import { CartItem } from '../shared/models/CartItem';
 export class CartService {
   private cart: Cart =  this.getFromLocalStorage();
   private cartSubject: BehaviorSubject<Cart> = new BehaviorSubject(this.cart)
+  order: any;
   constructor() {}
 
   addToCart(food:Food):void{
@@ -21,6 +23,7 @@ export class CartService {
     this.cart.items.push(new CartItem(food));
     this.setCartToLocalStorage();
   }
+ 
 
   removeFromCart(foodId: string): void{
     this.cart.items = this.cart.items
@@ -35,6 +38,7 @@ export class CartService {
 
     cartItem.quantity = quantity;
     cartItem.price = quantity * cartItem.food.price;
+   
    
 
     this.setCartToLocalStorage();

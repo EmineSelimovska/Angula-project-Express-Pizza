@@ -36,14 +36,17 @@ ngOnInit(): void {
           purchase_units:[
             {
               amount: {
-                currency_code:'BGN',
+                locale:'en_US',
+                currency_code:'EUR',
                 value: self.order.totalPrice,
                
+                
               }
             }
           ]
         })
       },
+      
       onApprove: async (data: any, actions: any) => {
         const payment = await actions.order.capture();
         this.order.paymentId = payment.id;
@@ -63,6 +66,7 @@ ngOnInit(): void {
           }
         );
       },
+      
       onError:(err:any) => {
         this.toastrService.error('Payment Failed', 'Error');
         console.log(err);

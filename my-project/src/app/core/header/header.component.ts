@@ -12,7 +12,12 @@ export class HeaderComponent implements OnInit{
 cartQuantity = 0;
 user!: User;
 
-constructor(cartService: CartService,private userService: UserService){
+
+
+constructor(cartService: CartService,
+  private userService: UserService,
+  
+  ){
   cartService.getCartObs().subscribe((newCart) => {
     this.cartQuantity = newCart.totalCount;
   })
@@ -20,16 +25,20 @@ constructor(cartService: CartService,private userService: UserService){
   userService.userObservable.subscribe((newUser) => {
     this.user = newUser;
   })
-
+ 
+ 
+  
 }
 
   ngOnInit(): void {
-    
-  }
 
+  }
+ 
+  
   logout(){
    this.userService.logout();
   }
+ 
 
   get isAuth(){
     return this.user.token;
