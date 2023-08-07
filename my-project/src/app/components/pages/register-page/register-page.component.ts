@@ -14,7 +14,8 @@ export class RegisterPageComponent implements OnInit{
    
   registerForm!: FormGroup;
   isSubmitted = false;
-
+  emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
+ 
   returnUrl = '';
   
   constructor(
@@ -27,20 +28,28 @@ export class RegisterPageComponent implements OnInit{
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(5)]],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required,Validators.pattern(this.emailPattern)]],
       password: ['', [Validators.required, Validators.minLength(5)]],
       confirmPassword: ['', [Validators.required]],
       address: ['', [Validators.required, Validators.minLength(10)]]
     },{
-      validators: PasswordsMatchValidator('password', 'confirmPassword')
+      validators: PasswordsMatchValidator('password', 'confirmPassword'),
+    
     });
 
     this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl;
   }
 
-  get fc(){
+
+ 
+get fc(){
     return this.registerForm.controls;
   }
+
+  get email() {
+    return this.registerForm.get('email');
+} 
+
   submit(){
     this.isSubmitted = true;
     if(this.registerForm.invalid) {
@@ -56,7 +65,7 @@ export class RegisterPageComponent implements OnInit{
       address: fv.address
     }
 
-    this.userService.register(user).subscribe(_=> {
+    this.userService.register(user).subscribe(()=> {
       this.router.navigateByUrl(this.returnUrl)
     })
   }

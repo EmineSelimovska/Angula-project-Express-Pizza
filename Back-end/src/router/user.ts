@@ -7,6 +7,7 @@ import { User, UserModel } from "../models/User";
 import bcrypt from 'bcryptjs';
 import { Types } from "mongoose";
 import { ObjectId } from "bson";
+import mongoose from "mongoose";
 
 
 
@@ -37,6 +38,8 @@ router.post("/login", asyncHandler(
   }
 ));
 
+
+
 router.post("/register", asyncHandler(
   async (req, res) => {
     const {name, email, password, address} = req.body;
@@ -50,7 +53,7 @@ router.post("/register", asyncHandler(
  
   
     const newUser:User = {
-      id:'',
+     id: new mongoose.Types.ObjectId,
       name,
       email: email.toLowerCase(),
       password: hashPassword,
@@ -64,13 +67,6 @@ router.post("/register", asyncHandler(
   }
 ));
 
-router.get('/profile/:id', asyncHandler(
-  async (req,res) => {
-    const user = await UserModel.findById(req.params.id);
-    res.send(user);
-    }
-  
-))
 
 const generateToken = (user: User) => {
   
@@ -85,6 +81,8 @@ const generateToken = (user: User) => {
     }
 );
 
+
+
  
 return {
 id: user.id,
@@ -95,5 +93,13 @@ id: user.id,
   token: token
 };
 };
+
+router.get('/profile/:id', asyncHandler(
+  async (req,res) => {
+    const user = await UserModel.findById(req.params.id);
+    res.send(user);
+    }
+  
+))
 
 export default router;

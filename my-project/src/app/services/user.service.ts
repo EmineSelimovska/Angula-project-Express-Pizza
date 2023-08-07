@@ -64,16 +64,15 @@ public userObservable: Observable<User>;
     )
   }
   
-  profile(id:string): Observable<User>{
-    return this.http.get<User>(USER_PROFILE_URL + id)
-  }
-
-  logout(){
+   logout(){
   this.userSubject.next(new User());
   localStorage.removeItem(USER_KEY);
   window.location.reload();
   }
- 
+  
+  profile(id:string): Observable<User>{
+    return this.http.get<User>(USER_PROFILE_URL + id)
+  }
  
   private setUserLocalStorage(user: User){
     localStorage.setItem(USER_KEY, JSON.stringify(user));

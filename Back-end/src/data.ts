@@ -126,7 +126,7 @@ export const sample_tags: any[] = [
 
 export const sample_users: any[] = [
     {
-   
+       
         name: "Emily Smith",
         email: "emily@abv.bg",
         password: "12345",
@@ -134,7 +134,7 @@ export const sample_users: any[] = [
         isAdmin: true,
     },
     {
-      
+       
         name: "Mishel Simsan",
         email: "mishel@abv.bg",
         password: "12345",
