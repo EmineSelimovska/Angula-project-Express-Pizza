@@ -27,7 +27,9 @@ export class FoodService {
   }
 
   getAllPizzaByTag(tag:string):Observable<Food[]>{
-    return this.httpClient.get<Food[]>(FOODS_BY_TAG_URL + tag);
+    return tag === "All" ?
+    this.getAll() :
+    this.httpClient.get<Food[]>(FOODS_BY_TAG_URL + tag);
   }
 
   getFoodById(foodId:string):Observable<Food>{
