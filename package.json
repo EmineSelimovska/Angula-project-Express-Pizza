@@ -1,0 +1,12 @@
+{
+  "name": "Angular Project",
+  "version": "1.0.0",
+  "engines": {
+      "node": ">=20 <21"
+  },
+  "scripts": {
+    "start": "cd back-end/built && node server.js",
+    "build": "cd my-project && npm run build",
+    "prebuild": "cd back-end && npm run build"
+  }
+}

@@ -7,13 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit{
 
-  @Input() visible = false;
+  @Input() visible = true;
   @Input() notFoundMessage = "Not Found!";
-  @Input() resetText = "Reset";
-  @Input() resetRoute = "/"
-
-
-
+ 
   constructor(){
 
   }
