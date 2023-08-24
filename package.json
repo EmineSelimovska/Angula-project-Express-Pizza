@@ -2,12 +2,16 @@
   "name": "my-project",
   "version": "1.0.0",
   "engines": {
-      "node": ">=18 <19"
+    "node": ">=18 <19"
   },
   "scripts": {
     "start": "cd back-end/built && node server.js",
     "prebuild": "cd back-end && npm run build",
     "build": "cd my-project && npm run build"
-
-  }
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
