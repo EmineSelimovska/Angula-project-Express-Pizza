@@ -2,7 +2,7 @@
   "name": "Angular-project-Express-Pizza",
   "version": "1.0.0",
   "engines": {
-      "node": ">=20 <21"
+      "node": ">=18 <19"
   },
   "scripts": {
     "start": "cd back-end/built && node server.js",
