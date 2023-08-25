@@ -25,7 +25,7 @@ app.use("/api/users", user_1.default);
 app.use("/api/orders", order_1.default);
 app.use(express_1.default.static('public'));
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname,'public', 'index.html'))
+    res.sendFile(__importDefault.join(__dirname,'public', 'index.html'))
 })
 var port = process.env.PORT || 5000;
 app.listen(port, function () {
