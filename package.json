@@ -10,8 +10,11 @@
     "build": "cd my-project && npm run build"
   },
   "main": "index.js",
-  "devDependencies": {},
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "My first Angular project - Express Pizza!",
+  "dependencies": {
+    "build": "^0.1.4",
+    "node-pre-gyp": "^0.17.0"
+  }
 }
