@@ -15,18 +15,24 @@ dbConnect();
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
-
+callback(null, true),
 app.use(cors({
     credentials:true,
-    origin:["http://localhost:4200"]
+   
+    origin:["http://localhost:4200"],
+    
 }));
 app.use(express.json());
+
 
 
 app.use("/api/foods", food);
 app.use("/api/users", user);
 app.use("/api/orders", order);
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname,'public', 'index.html'))
+})
 
 
 
@@ -36,4 +42,9 @@ app.listen(port, () => {
     
 }); 
 
+
+
+function callback(arg0: null, arg1: boolean) {
+    throw new Error('Function not implemented.');
+}
   
