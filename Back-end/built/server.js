@@ -23,6 +23,9 @@ app.use(express_1.default.json());
 app.use("/api/foods", food_1.default);
 app.use("/api/users", user_1.default);
 app.use("/api/orders", order_1.default);
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname,'public', 'index.html'))
+})
 var port = process.env.PORT || 5000;
 app.listen(port, function () {
     console.log("Welcome to the http://localhost:" + port);
