@@ -2,7 +2,7 @@
   "name": "my-project",
   "version": "1.0.0",
   "engines": {
-    "node": ">=18 <19"
+    "node": ">=16.9 "
   },
   "scripts": {
     "start": "cd back-end/built && node server.js",
@@ -10,11 +10,9 @@
     "build": "cd my-project && npm run build"
   },
   "main": "index.js",
+  "devDependencies": {},
   "author": "",
   "license": "ISC",
-  "description": "My first Angular project - Express Pizza!",
-  "dependencies": {
-    "build": "^0.1.4",
-    "node-pre-gyp": "^0.17.0"
-  }
+  "keywords": [],
+  "description": ""
 }
