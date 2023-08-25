@@ -2,7 +2,7 @@
   "name": "my-project",
   "version": "1.0.0",
   "engines": {
-    "node": ">=18 <19"
+    "node": ">=14 <15"
   },
   "scripts": {
     "start": "cd back-end/built && node server.js",
