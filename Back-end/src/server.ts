@@ -9,6 +9,7 @@ import food from './router/food';
 import user from './router/user';
 import order from './router/order';
 import { dbConnect } from './config/db.config';
+import path from 'path';
 
 dbConnect();
 
@@ -29,7 +30,7 @@ app.use(express.json());
 app.use("/api/foods", food);
 app.use("/api/users", user);
 app.use("/api/orders", order);
-
+app.use(express.static('public'));
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname,'public', 'index.html'))
 })

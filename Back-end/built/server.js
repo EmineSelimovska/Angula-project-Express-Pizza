@@ -23,6 +23,7 @@ app.use(express_1.default.json());
 app.use("/api/foods", food_1.default);
 app.use("/api/users", user_1.default);
 app.use("/api/orders", order_1.default);
+app.use(express.static('public'));
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname,'public', 'index.html'))
 })
