@@ -16,7 +16,6 @@ var path_1 = __importDefault(require("path"));
 (0, db_config_1.dbConnect)();
 var app = (0, express_1.default)();
 app.use(express_1.default.urlencoded({ extended: true }));
-callback(null, true),
     app.use((0, cors_1.default)({
         credentials: true,
         origin: ["http://localhost:4200"],
@@ -33,6 +32,4 @@ var port = process.env.PORT || 5000;
 app.listen(port, function () {
     console.log("Welcome to the http://localhost:" + port);
 });
-function callback(arg0, arg1) {
-    throw new Error('Function not implemented.');
-}
+

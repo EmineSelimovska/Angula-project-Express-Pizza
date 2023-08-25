@@ -16,7 +16,7 @@ dbConnect();
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
-callback(null, true),
+
 app.use(cors({
     credentials:true,
    
@@ -45,7 +45,5 @@ app.listen(port, () => {
 
 
 
-function callback(arg0: null, arg1: boolean) {
-    throw new Error('Function not implemented.');
-}
+
   
