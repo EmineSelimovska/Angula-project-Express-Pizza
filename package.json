@@ -1,15 +1,14 @@
 {
-  "name": "my-project",
+  "name": "angular-project-express-pizza",
   "version": "1.0.0",
   "engines": {
     "node": ">=14 <15"
   },
   "scripts": {
-    "start": "cd back-end/built && nodemon server.js",
+    "start": "cd back-end/built && node server.js",
     "prebuild": "cd back-end && npm run build",
-    "build": "cd my-project && npm run build && node ace build --production"
-      
-      
+    "build": "cd my-project && ng build"
+    
   },
   "main": "index.js",
   "devDependencies": {},
