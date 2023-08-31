@@ -23,11 +23,6 @@ app.use(cors({
     origin:["http://localhost:4200"],
     
 }));
-const corsOptions = {
-    origin: 'https://my-project-jl0r.onrender.com/',
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-};
-    app.use(cors(corsOptions));
 
  app.use(express.json());
 
