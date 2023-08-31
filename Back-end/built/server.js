@@ -28,8 +28,8 @@ app.use(express_1.default.static('../../my-project/dist/my-project'));
 app.get('*', function (req, res) {
     res.sendFile(path_1.default.join(__dirname, '../../my-project/dist/my-project/index.html'));
 });
-app.use(
-    cors_1.default({
+app.use((0,
+    cors_1.default)({
       origin: "/api",
       methods: ["GET", "POST", "DELETE", "UPDATE", "PUT"],
       credentials: true,
