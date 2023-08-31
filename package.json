@@ -8,7 +8,6 @@
     "start": "cd Back-end/built && node server.js",
     "prebuild": "cd Back-end && npm run build",
     "build": "cd my-project && npm run build"
-    
   },
   "main": "index.js",
   "devDependencies": {},
