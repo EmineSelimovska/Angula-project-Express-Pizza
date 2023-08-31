@@ -30,7 +30,7 @@ app.get('*', function (req, res) {
 });
 app.use(
     cors_1.default({
-      origin: "/api/*",
+      origin: "/api",
       methods: ["GET", "POST", "DELETE", "UPDATE", "PUT"],
       credentials: true,
     })
