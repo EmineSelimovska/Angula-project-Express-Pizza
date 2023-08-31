@@ -30,9 +30,9 @@ app.use(express.json());
 app.use("/api/foods", food);
 app.use("/api/users", user);
 app.use("/api/orders", order);
-app.use(express.static('../my-project/dist'));
+app.use(express.static('public'));
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname,'../my-project/dist/index.html'))
+    res.sendFile(path.join(__dirname,'public', 'index.html'))
 })
 
 
