@@ -23,7 +23,13 @@ app.use(cors({
     origin:["http://localhost:4200"],
     
 }));
-app.use(express.json());
+const corsOptions = {
+    origin: '/\.onrender\.com$/',
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+};
+    app.use(cors(corsOptions));
+
+ app.use(express.json());
 
 
 
@@ -33,7 +39,7 @@ app.use("/api/orders", order);
 
 
 app.use(express.static('../../my-project/dist/my-project'));
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../../my-project/dist/my-project/index.html'))
 })
 
