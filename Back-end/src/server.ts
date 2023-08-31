@@ -32,9 +32,9 @@ app.use("/api/users", user);
 app.use("/api/orders", order);
 
 
-app.use(express.static('public'));
+app.use(express.static('../my-project/dist'));
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname,'public', 'index.html'))
+    res.sendFile(path.join(__dirname, '../my-project/dist/index.html'))
 })
 
 
