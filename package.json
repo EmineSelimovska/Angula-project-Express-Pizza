@@ -7,7 +7,7 @@
   "scripts": {
     "start": "cd back-end/built && node server.js",
     "prebuild": "cd back-end && npm run build",
-    "build": "cd my-project && ng build"
+    "build": "cd my-project && npm run build"
     
   },
   "main": "index.js",
