@@ -1,8 +1,11 @@
 {
   "name": "my-project",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "npm install --force && ng build --configuration production"
+  },
   "dependencies": {
     "@angular-devkit/build-angular": "^16.2.0",
     "@angular/core": "^16.2.2",
@@ -559,9 +562,6 @@
     "zalgo-promise": "^1.0.48",
     "zoid": "^6.0.82",
     "zone.js": "^0.13.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
