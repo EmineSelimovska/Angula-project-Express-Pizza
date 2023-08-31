@@ -561,13 +561,14 @@
     "yargs-parser": "^21.1.1",
     "zalgo-promise": "^1.0.48",
     "zoid": "^6.0.82",
-    "zone.js": "^0.13.1"
+    "zone.js": "^0.13.1",
+    "@angular/cli": "^16.2.0",
+    "@types/leaflet": "^1.9.3"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@angular/cli": "^16.2.0",
-    "@types/leaflet": "^1.9.3"
+   
   }
 }
