@@ -29,7 +29,7 @@ app.get('*', function (req, res) {
     res.sendFile(path_1.default.join(__dirname, '../../my-project/dist/my-project/index.html'));
 });
 const corsOptions = {
-    origin: '/\.onrender\.com$/',
+    origin: 'https://my-project-jl0r.onrender.com/',
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 };
 app.use(cors(corsOptions));

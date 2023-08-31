@@ -24,7 +24,7 @@ app.use(cors({
     
 }));
 const corsOptions = {
-    origin: '/\.onrender\.com$/',
+    origin: 'https://my-project-jl0r.onrender.com/',
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 };
     app.use(cors(corsOptions));
