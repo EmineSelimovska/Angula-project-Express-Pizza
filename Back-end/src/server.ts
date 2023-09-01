@@ -34,9 +34,9 @@ app.use("/api/orders", order);
 
 
 
-app.use(express.static('../../src'));
+app.use(express.static('../../'));
 app.use('/*', (req, res) => {
-    res.sendFile(path.join(__dirname,'../../src/index.html'))
+    res.sendFile(path.join(__dirname,'../../index.html'))
 })
 
 
