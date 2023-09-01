@@ -25,7 +25,7 @@ app.use(cors({
 }));
 app.use(
     cors({
-      origin: "/api",
+      origin: "*",
       methods: ["GET", "POST", "DELETE", "UPDATE", "PUT"],
       credentials: true,
     })
@@ -39,9 +39,12 @@ app.use("/api/foods", food);
 app.use("/api/users", user);
 app.use("/api/orders", order);
 
+app.get('*', (req, res) => {
+    res.status(404)
+})
 
 app.use(express.static('../../my-project/dist/my-project'));
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../../my-project/dist/my-project/index.html'))
 })
 

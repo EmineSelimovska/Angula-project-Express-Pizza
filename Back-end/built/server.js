@@ -24,13 +24,16 @@ app.use(express_1.default.json());
 app.use("/api/foods", food_1.default);
 app.use("/api/users", user_1.default);
 app.use("/api/orders", order_1.default);
+app.get('*', function(req, res) {
+    res.sendStatus(404)
+})
 app.use(express_1.default.static('../../my-project/dist/my-project'));
-app.get('/api', function (req, res) {
+app.get('/', function (req, res) {
     res.sendFile(path_1.default.join(__dirname, '../../my-project/dist/my-project/index.html'));
 });
 app.use((0,
     cors_1.default)({
-      origin: "/api",
+      origin: "*",
       methods: ["GET", "POST", "DELETE", "UPDATE", "PUT"],
       credentials: true,
     })
