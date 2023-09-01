@@ -24,12 +24,10 @@ app.use(express_1.default.json());
 app.use("/api/foods", food_1.default);
 app.use("/api/users", user_1.default);
 app.use("/api/orders", order_1.default);
-
-app.use(express_1.default.static('../../my-project/dist/my-project'));
+app.use(express_1.default.static(`../../my-project/dist/my-project`));
 app.use('/*', function (req, res) {
-    res.sendFile(path_1.default.join(__dirname, '../../my-project/dist/my-project/index.html'));
+    res.sendFile(path_1.default.join(__dirname, `../../my-project/dist/my-project/index.html`));
 });
-
 var port = process.env.PORT || 5000;
 app.listen(port, function () {
     console.log("Welcome to the http://localhost:" + port);
