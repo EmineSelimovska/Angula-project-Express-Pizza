@@ -34,9 +34,9 @@ app.use("/api/orders", order);
 
 
 
-app.use(express.static('../../public'));
+app.use(express.static('../../dist/my-project'));
 app.use('/*', (req, res) => {
-    res.sendFile(path.join(__dirname,'../../public', 'index.html'))
+    res.sendFile(path.join(__dirname,'../../dist/my-project', 'index.html'))
 })
 
 
