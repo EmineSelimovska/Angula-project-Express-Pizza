@@ -28,7 +28,7 @@ app.get('*', function(req, res) {
     res.sendStatus(404).sendFile('Not Found')
 })
 app.use(express_1.default.static('../../my-project/dist/my-project'));
-app.get('/', function (req, res) {
+app.get('/api', function (req, res) {
     res.sendFile(path_1.default.join(__dirname, '../../my-project/dist/my-project/index.html'));
 });
 
