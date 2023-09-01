@@ -32,10 +32,15 @@ app.use("/api/foods", food);
 app.use("/api/users", user);
 app.use("/api/orders", order);
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 
 
 app.use(express.static('../../my-project/dist/my-project'));
-app.use('/api', (req, res) => {
+app.use('/*', (req, res) => {
     res.sendFile(path.join(__dirname,'../../my-project/dist/my-project/index.html'))
 })
 
