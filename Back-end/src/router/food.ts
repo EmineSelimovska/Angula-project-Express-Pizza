@@ -77,12 +77,7 @@ router.get("/:foodId", asyncHandler(
          res.send(food);
        }
 ));
-router.get("*", asyncHandler(
-    async (req, res) => {
-        
-         res.send('Not Found').status(404);
-       }
-));
+
 
 
 export default router;

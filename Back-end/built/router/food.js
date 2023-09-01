@@ -151,10 +151,5 @@ router.get("/:foodId", (0, express_async_handler_1.default)(function (req, res) 
         }
     });
 }); }));
-router.get("*", (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    return __generator(this, function (_a) {
-        res.send('Not Found').status(404);
-        return [2 /*return*/];
-    });
-}); }));
+
 exports.default = router;
