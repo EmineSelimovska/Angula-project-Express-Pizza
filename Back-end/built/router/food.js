@@ -151,5 +151,4 @@ router.get("/:foodId", (0, express_async_handler_1.default)(function (req, res) 
         }
     });
 }); }));
-
 exports.default = router;
