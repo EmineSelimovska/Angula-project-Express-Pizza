@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --hmr --disable-host-check --port 4200 --public-host=https://my-project-0w1a.onrender.com --host=0.0.0.0 --project=my-project",
+    "start": "ng serve",
     "build": "npm install --force && ng build --configuration production"
   },
   "private": true,
