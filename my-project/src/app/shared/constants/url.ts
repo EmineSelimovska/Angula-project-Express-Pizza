@@ -1,4 +1,4 @@
-import { environment } from "src/environments/environment";
+import { environment } from "src/environments/environment.prod";
 const url = environment.production? '' : "http://localhost:5000";
 
 export const FOODS_URL = url + '/api/foods';
