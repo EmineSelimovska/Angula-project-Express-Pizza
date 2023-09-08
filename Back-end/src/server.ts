@@ -40,7 +40,7 @@ app.use(function(req, res, next) {
 
 
 app.use(express.static('../../my-project/dist/my-project'));
-app.use('*', (req, res) => {
+app.use('/api', (req, res) => {
     res.sendFile(path.join(__dirname,'../../my-project/dist/my-project/index.html'))
 })
 
