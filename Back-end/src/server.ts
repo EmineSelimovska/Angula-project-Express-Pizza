@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({
     credentials:true,
-   
+  
     origin:["http://localhost:4200"],
     
 }));
@@ -33,8 +33,10 @@ app.use("/api/users", user);
 app.use("/api/orders", order);
 
 app.use(function(req, res, next) {
+    withCredentials: true;
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    
     next();
   });
 
