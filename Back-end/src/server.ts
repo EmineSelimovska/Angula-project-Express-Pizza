@@ -37,9 +37,9 @@ app.use(function(req, res, next) {
   });
 
 
-app.use(express.static('../../my-project/dist/my-project'));
+app.use(express.static('../../my-project/docs'));
 app.use('/*', (req, res) => {
-    res.sendFile(path.join(__dirname,'../../my-project/dist/my-project/index.html'))
+    res.sendFile(path.join(__dirname,'../../my-project/docs/index.html'))
 })
 
 
