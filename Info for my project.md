@@ -97,7 +97,7 @@
   - Add Register service method
   - Add Register Link
   - Add Register Components
-  15.Loading
+  15. Loading
   - Add Image
   - Add Components
   - Add Service
