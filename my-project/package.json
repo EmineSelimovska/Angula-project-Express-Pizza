@@ -12,6 +12,7 @@
     "@angular/compiler": "^17.3.3",
     "@angular/compiler-cli": "^17.3.3",
     "@angular/core": "^17.3.3",
+    "@angular/forms": "^17.3.3",
     "@angular/localize": "^17.3.3",
     "@angular/platform-browser-dynamic": "^17.3.3",
     "@angular/router": "^17.3.3",
@@ -573,6 +574,6 @@
     "@angular/cli": "^17.3.3",
     "@types/chai": "^4.3.14",
     "https-proxy-agent": "^7.0.1",
-    "typescript": "^4.3.5"
+    "typescript": "^5.2.2"
   }
 }
