@@ -15,7 +15,7 @@
           "options": {
             "allowedCommonJsDependencies": [
               "lodash",
-              "validator"
+               "validator"
            ],
             "outputPath": "docs",
             "index": "src/index.html",
