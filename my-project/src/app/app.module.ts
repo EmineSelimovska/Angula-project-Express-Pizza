@@ -6,7 +6,7 @@ import { HeaderComponent } from './core/header/header.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { AdminRoutingModule } from './admin/admin-routing.module';
 import { AppRoutingModule } from './app-routing.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Ng2BootstrapModule } from 'ng-bootstrap';
 import { SearchComponent } from './components/pages/search/search.component';
 import { TagsComponent } from './components/pages/tags/tags.component';
 import { FoodPageComponent } from './components/pages/food-page/food-page.component';
@@ -14,7 +14,7 @@ import { CartPageComponent } from './components/pages/cart-page/cart-page.compon
 import { TitleComponent } from './components/pages/title/title.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { InputContainerComponent } from './components/pages/input-container/input-container.component';
@@ -32,8 +32,6 @@ import { PaymentPageComponent } from './components/pages/payment-page/payment-pa
 import { PaypalButtonComponent } from './components/pages/paypal-button/paypal-button.component';
 import { OrdersTrackPageComponent } from './components/pages/orders-track-page/orders-track-page.component';
 import { ProfileComponent } from './components/pages/profile/profile.component';
-
-
 
 
 @NgModule({
@@ -61,17 +59,14 @@ import { ProfileComponent } from './components/pages/profile/profile.component';
     PaypalButtonComponent,
     OrdersTrackPageComponent,
     ProfileComponent,
-
-  
-   
-    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AdminRoutingModule,
     AppRoutingModule,
-    NgbModule,
+    Ng2BootstrapModule,
+    FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
