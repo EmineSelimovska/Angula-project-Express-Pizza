@@ -16,7 +16,6 @@ user!: User;
 
 constructor(cartService: CartService,
   private userService: UserService,
-  
   ){
   cartService.getCartObs().subscribe((newCart) => {
     this.cartQuantity = newCart.totalCount;
