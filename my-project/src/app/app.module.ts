@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -80,7 +80,7 @@ import { ProfileComponent } from './components/pages/profile/profile.component';
     {provide: HTTP_INTERCEPTORS, useClass:LoadingInterceptor,multi: true},
    {provide: HTTP_INTERCEPTORS, useClass:AuthInterceptor,multi: true}
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 
 
