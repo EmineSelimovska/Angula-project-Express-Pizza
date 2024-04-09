@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 process.env.MONGO_URL;
 
-import bodyParser from 'body-parser';
+// import bodyParser from 'body-parser';
 import express from "express";
 import cors from "cors";
 import food from './router/food';
@@ -37,10 +37,10 @@ app.use(function(req, res, next) {
   });
 
 
-app.use(express.static('../../my-project/docs'));
-app.use('/*', (req, res) => {
-    res.sendFile(path.join(__dirname,'../../my-project/docs/index.html'));
-})
+// app.use(express.static('../../my-project/docs'));
+// app.use('/*', (req, res) => {
+//     res.sendFile(path.join(__dirname,'../../my-project/docs/index.html'));
+// })
 
 
 const PORT = process.env.PORT || 5000;

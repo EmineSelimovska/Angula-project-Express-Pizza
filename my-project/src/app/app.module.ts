@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { AdminRoutingModule } from './admin/admin-routing.module';
-import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './components/pages/search/search.component';
 import { TagsComponent } from './components/pages/tags/tags.component';
@@ -64,7 +63,6 @@ import { ProfileComponent } from './components/pages/profile/profile.component';
     BrowserModule,
     BrowserAnimationsModule,
     AdminRoutingModule,
-    AppRoutingModule,
     NgbModule,
     FormsModule,
     HttpClientModule,
