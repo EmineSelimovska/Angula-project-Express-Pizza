@@ -1,4 +1,4 @@
-import {model, Schema, Types} from 'mongoose';
+import mongoose, {model, Schema, Types} from 'mongoose';
 import { Food, FoodSchema } from './Food';
 import { OrderStatus } from '../constants/order_status';
 
@@ -62,4 +62,4 @@ const orderSchema = new Schema<Order>({
     }
 });
 
-export const OrderModel = model('order', orderSchema);
+export const OrderModel = mongoose.model('order', orderSchema);

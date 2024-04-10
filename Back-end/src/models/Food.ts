@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import mongoose, { Schema, model } from "mongoose";
 
 export interface Food{
      id: string;
@@ -36,4 +36,4 @@ export const FoodSchema = new Schema<Food>(
    
 )
 
-export const FoodModel = model<Food>('food',FoodSchema);
+export const FoodModel = mongoose.model<Food>('food',FoodSchema);
