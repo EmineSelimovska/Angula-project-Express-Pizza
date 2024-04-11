@@ -2,7 +2,7 @@
 
 export const sample_foods: any[] = [
     {
-        id: "1",
+       
         name: "Margherita",
         price: 11.90,
         tags:["Mozzarella", "Pizza"],
@@ -13,7 +13,7 @@ export const sample_foods: any[] = [
         cookTime: "15-20",
     },
     {
-        id: "2",
+       
         name: "Tripple Mushroom",
         price: 12.90,
         tags:["Mushroom", "Vegetarian"],
@@ -24,7 +24,7 @@ export const sample_foods: any[] = [
         cookTime: "15-20",
     },
     {
-        id: "3",
+       
         name: "Vegetarian",
         price: 12.90,
         tags:["Vegetarian", "Pizza"],
@@ -35,7 +35,7 @@ export const sample_foods: any[] = [
         cookTime: "15-20",
     },
     {
-        id: "4",
+        
         name: "Pepperoni",
         price: 12.90,
         tags:["Express", "Meat"],
@@ -46,7 +46,7 @@ export const sample_foods: any[] = [
         cookTime: "15-25",
     },
     {
-        id: "5",
+        
         name: "Capricciosa",
         price: 15.90,
         tags:[ "Meat"],
@@ -57,7 +57,7 @@ export const sample_foods: any[] = [
         cookTime: "15-25",
     },
     {
-        id: "6",
+        
         name: "Prosciutto crudo",
         price: 15.80,
         tags:["Pizza", "Meat"],
@@ -68,7 +68,7 @@ export const sample_foods: any[] = [
         cookTime: "15-25",
     },
     {
-        id: "7",
+        
         name: "Prosciutto funghi",
         price: 15.80,
         tags:["Meat"],
@@ -79,7 +79,7 @@ export const sample_foods: any[] = [
         cookTime: "15-20",
     },
     {
-        id: "8",
+       
         name: "Quattro formaggi",
         price: 15.80,
         tags:["Express", "Cheese"],
@@ -90,7 +90,7 @@ export const sample_foods: any[] = [
         cookTime: "15-20",
     },
     {
-        id: "9",
+        
         name: "Quattro di carne",
         price: 15.80,
         tags:["Express", "Mozzarella"],
@@ -101,7 +101,7 @@ export const sample_foods: any[] = [
         cookTime: "15-20",
     },
     {
-        id: "10",
+       
         name: "Jalapeno Pizza",
         price: 16.80,
         tags:["Express", "Pizza"],

@@ -1,7 +1,8 @@
 import mongoose, { Schema, model } from "mongoose";
 
 export interface Food{
-     id: string;
+   
+     _id: mongoose.Types.ObjectId;
     name: string;
     price: number;
     tags: string[];
@@ -36,4 +37,4 @@ export const FoodSchema = new Schema<Food>(
    
 )
 
-export const FoodModel = mongoose.model<Food>('food',FoodSchema);
+export const FoodModel = model<Food>('food',FoodSchema);
