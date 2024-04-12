@@ -8,7 +8,8 @@
 
 .content{
     width: 35rem;
-    margin-right: 3rem;
+    margin-right: 4rem;
+    padding: 2rem;
 }
 
 .content,form{
@@ -28,7 +29,9 @@ form{
 
 .buttons{
     margin: 2rem;
-    width: 35rem;
+    width: 40rem;
+    padding-right: 16rem;
+
 }
 
 button{

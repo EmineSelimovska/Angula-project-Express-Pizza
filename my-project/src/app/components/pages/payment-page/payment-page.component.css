@@ -31,8 +31,12 @@
     display: flex;
     justify-content: center;
   }
+  .map{
+    padding-right: 2rem;
+  }
   
   .buttons{
     margin: 2rem;
-    width: 35rem;
+    width: 40rem;
+    padding-right: 15rem;
   }
