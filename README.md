@@ -195,4 +195,6 @@ Project Structure
    - Add HTML
    - ADD CSS
    ![](./picture/user-info.png)
+21. Add Footer components 
+- html, css,svg
 
