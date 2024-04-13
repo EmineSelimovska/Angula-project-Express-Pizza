@@ -69,6 +69,7 @@ Project Structure
  -> add ts
  -> add html
  -> add css
+ ![](./picture/not-found.png)
  - Add To Pages
  -> Home Page
  -> Food Page
