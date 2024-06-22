@@ -27,6 +27,6 @@ jobs:
     #   run: cd server && npm install 
     - name: Run Back-End
       run: npm start &
-     - name: Run Front-End
+    - name: Run Front-End
       run: npm start &
    
