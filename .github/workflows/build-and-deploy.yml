@@ -21,10 +21,10 @@ jobs:
       with:
         node-version: 16.14
         cache: 'npm'
-    - name: Install dependancies 
+    - name: Install dependancies Front End
       run:  cd my-project && npm install 
-    # - name: Install dependancies Back End
-    #   run: cd server && npm install 
+    - name: Install dependancies Back End
+      run: cd Back-end && npm install 
     - name: Run Back-End
       run: npm start &
     - name: Run Front-End
